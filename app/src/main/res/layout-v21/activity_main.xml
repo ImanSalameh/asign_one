@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A735E5"
+    android:background="#35E5B3"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -15,6 +15,7 @@
         android:text="Animals App"
         android:textAlignment="center"
         android:textSize="22sp"
+        android:hint="domesticated"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -46,19 +47,19 @@
         tools:ignore="InvalidId,UsingOnClickInXml" />
 
 
-<EditText
-    android:id="@+id/edittext"
-    android:layout_width="306dp"
-    android:layout_height="153dp"
-    android:ems="10"
-    android:hint="predatory/domesticated"
-    android:inputType="text"
-    android:textColorHighlight="#008096"
-    android:textColorHint="#3F51B5"
-    android:textSize="34sp"
-    tools:layout_editor_absoluteX="45dp"
-    tools:layout_editor_absoluteY="50dp"
-    />
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="306dp"
+        android:layout_height="153dp"
+        android:ems="10"
+        android:hint="de"
+        android:inputType="text"
+        android:textColorHighlight="#008096"
+        android:textColorHint="#3F51B5"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="50dp"
+        />
 
 
-</LinearLayout>
+    </LinearLayout>

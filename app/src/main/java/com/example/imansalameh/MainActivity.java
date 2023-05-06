@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,17 +21,16 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spinner;
     private TextView textview;
 
-
+private EditText editText;
     public MainActivity() {
     }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         spinner=findViewById(R.id.spinner);
-        textview=findViewById(R.id.edittext);
+        editText=findViewById(R.id.edittext);
         populateSpinner();
 
     }
@@ -49,14 +49,16 @@ public class MainActivity extends AppCompatActivity {
         item=spinner.getSelectedItem().toString();
         List<Animals> animals = ob.getN(item);
         String str="";
-        for(Animals a:animals){
-            textview.setText(a.getDescription());
+        for (Animals a : animals) {
 
-        }
+              if (editText.getText().toString().equals(a.getDescription())){
+                Toast.makeText(this, "pravoo", Toast.LENGTH_LONG).show();
+                  System.out.println(a.getDescription());
+                  System.out.println(editText.getText().toString());          }
+          else
+           Toast.makeText(this,"try again", Toast.LENGTH_LONG).show();
 
-        Toast.makeText(  this, str, Toast.LENGTH_LONG).show();
-    }
 
-
-
+}
+}
 }

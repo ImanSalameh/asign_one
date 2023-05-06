@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".MainActivity"
-android:orientation="vertical"
-android:background="@color/black"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A735E5"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    >
     <TextView
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:layout_marginTop="20dp"
-        android:text="@string/welcome"
+        android:text="Animals App"
         android:textAlignment="center"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,26 +22,42 @@ android:background="@color/black"
 
 
         />
+
     <Spinner
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_gravity="center"
         android:id="@+id/spinner"
-        android:entries="@+id/spinneran"
-        >
-
-    </Spinner>
-    <Button
+        style="@android:style/Widget.Material.Light.Spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:layout_gravity="center"
-        android:outlineAmbientShadowColor="@color/white"
+        android:layout_margin="8dp"
+        android:textAlignment="gravity"
+        android:textDirection="ltr"
+        tools:ignore="InvalidId"></Spinner>
+    <Button
         android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
         android:onClick="btnAnimalsOnClick"
+        android:outlineAmbientShadowColor="#43A047"
 
+        android:textColorHighlight="#43A047"
         tools:ignore="InvalidId,UsingOnClickInXml" />
 
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="306dp"
+        android:layout_height="153dp"
+        android:ems="10"
+        android:hint="predatory/domesticated"
+        android:inputType="text"
+        android:textColorHighlight="#008096"
+        android:textColorHint="#3F51B5"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="50dp"
+        />
 
 </LinearLayout>
